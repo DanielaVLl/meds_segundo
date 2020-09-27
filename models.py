@@ -53,7 +53,7 @@ class Player(BasePlayer):
 
     # Elecciones
     e1 = models.IntegerField(choices=[[0, 'Ninguna'], [1, 'Loratadina'], [2, 'Alataran']],
-                             label='Imagina que presentas ciertos síntomas debido a una gripe como estornudos, secreción nasal, picazón en los ojos, nariz y garganta. Por ello, decides consultar con un médico y este te dice que, para contrarrestarlos, podrías tomar un medicamento. ¿Cuál elegirías? (solo una toma, es decir, una pastilla/cápsula)', widget=widgets.RadioSelect)
+                             label='Imagina que presentas ciertos síntomas debido a una gripe como estornudos, secreción nasal, picazón en los ojos, nariz y garganta. Por ello, decides consultar con un médico y este te dice que, para contrarrestarlos, podrías tomar un medicamento. Dada la información indicada debajo (la cual representa el costo de una pastilla), ¿cuál elegirías?', widget=widgets.RadioSelect)
     e1x = models.IntegerField(choices=[[1, 'Porque el otro es muy barato'], [0, 'Porque el otro es muy caro'], [4, 'Me da miedo consumir genéricos'],[3, 'Los genéricos no tienen tanta eficacia'], [2, 'Confío en los genéricos']],
                              label='En caso haya marcado alguno de los dos medicamentos: ¿Por qué seleccionó esa opción? Si marcó “ninguna”, entonces dejar en blanco.',
                              widget=widgets.RadioSelect, blank=True)
@@ -61,7 +61,7 @@ class Player(BasePlayer):
                               label='En caso haya marcado “ninguna”: ¿Por qué seleccionó esa opción? Si marcó algún medicamento, entonces dejar en blanco.',
                               widget=widgets.RadioSelect, blank=True)
     e21 = models.IntegerField(choices=[[0, 'Ninguna'], [1, 'Ibuprofeno'], [2, 'Daloflax']],
-                              label='Imagina que te da una inflamación de amígdalas que te produce dolor y fiebre; por tanto, decides consultar con un médico. Este te dice que es porque tienes síntomas de gripe y para contrarrestarlos podrías tomar algún medicamento. Dada la información indicada debajo (la cual representa el costo de una pastilla), ¿cuál elegirías?',
+                              label='Imagina que te da una inflamación de amígdalas que te produce dolor y fiebre; por tanto, decides consultar con un médico. Este te dice que es porque tienes síntomas de gripe y para contrarrestarlos podrías tomar algún medicamento. ¿Cuál elegirías? (solo una toma, es decir, una pastilla/cápsula)',
                               widget=widgets.RadioSelect)
     e21x = models.IntegerField(choices=[[4, 'Me da miedo consumir genéricos'],[3, 'Los genéricos no tienen tanta eficacia'], [2, 'Confío en los genéricos']],
                              label='En caso haya marcado alguno de los dos medicamentos: ¿Por qué seleccionó esa opción? Si marcó “ninguna”, entonces dejar en blanco.',
